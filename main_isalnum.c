@@ -39,6 +39,5 @@ int main(void)
 	printf("ch: %c. Testing isalnum: %d | Expected: %d\n", ch, ft_isalnum(ch), isalnum(ch));
 	ch = '*';
 	printf("ch: %c. Testing isalnum: %d | Expected: %d\n", ch, ft_isalnum(ch), isalnum(ch));
-
 }
 

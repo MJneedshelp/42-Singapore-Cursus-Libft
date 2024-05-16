@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 int main(void)
@@ -19,19 +20,19 @@ int main(void)
 	
 	printf("--------------ft_isdigit test--------------\n");
 	ch = '9';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = 'Z';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = '0';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = '@';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = 'a';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = 'z';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = 'h';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 	ch = '{';
-	printf("ch: %c. Testing isdigit: %d\n", ch, ft_isdigit(ch));
+	printf("ch: %c. Testing isdigit: %d | Expected: %d\n", ch, ft_isdigit(ch), isdigit(ch));
 }

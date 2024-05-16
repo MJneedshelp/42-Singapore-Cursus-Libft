@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Description: Takes in a character and converts it to upper case. If the char
-  is not a lowercase character, then return the same character.*/
+/* Description: Takes in a character and converts it to upper case. If the char
+   is not a lowercase character, then return the same character. */
 
 #include "libft.h"
 
-int	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

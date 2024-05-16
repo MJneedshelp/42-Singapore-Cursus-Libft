@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Description: takes in a char and checks if the character is an alphabet.*/
+/* Description: takes in a char and checks if the character is an alphanumeric.
+   Returns a non-zero value if the char is alphanumeric. Returns 0 if the char is
+   non-alphanumeric. */
 
 #include "libft.h"
 

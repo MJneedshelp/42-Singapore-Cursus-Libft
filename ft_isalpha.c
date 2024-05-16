@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Description: takes in a char and checks if the character is an alphabet.*/
+/* Description: takes in a char and checks if the character is an alphabet.
+   Returns a non-zero value if the char is an alphabet. Returns 0 if the char is
+   non-alphabetical. */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
 }

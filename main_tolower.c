@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 int main(void)
@@ -19,20 +20,20 @@ int main(void)
 
 	printf("--------------ft_tolower test--------------\n");
 	ch = 'a';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = '@';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = '0';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = 'z';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = 'H';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = 'P';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = 'A';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 	ch = 'Z';
-	printf("ch: %c. Testing ft_tolower: %c\n", ch, ft_tolower(ch));
+	printf("ch: %c. Testing ft_tolower: %c | Expected: %c\n", ch, ft_tolower(ch), tolower(ch));
 
 }

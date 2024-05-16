@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 int main(void)
@@ -19,15 +20,15 @@ int main(void)
 
 	printf("--------------ft_toupper test--------------\n");
 	ch = 'a';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 	ch = '@';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 	ch = '0';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 	ch = 'z';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 	ch = 'g';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 	ch = 'P';
-	printf("ch: %c. Testing ft_toupper: %c\n", ch, ft_toupper(ch));
+	printf("ch: %c. Testing ft_toupper: %c | Expected: %c\n", ch, ft_toupper(ch), toupper(ch));
 }

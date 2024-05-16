@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 int main(void)
@@ -19,19 +20,19 @@ int main(void)
 	
 	printf("--------------ft_isalpha test--------------\n");
 	ch = 'A';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = 'Z';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = '0';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = '@';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = 'a';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = 'z';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = 'h';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 	ch = '{';
-	printf("ch: %c. Testing isalpha: %d\n", ch, ft_isalpha(ch));
+	printf("ch: %c. Testing isalpha: %d | Expected: %d\n", ch, ft_isalpha(ch), isalpha(ch));
 }

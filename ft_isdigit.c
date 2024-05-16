@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Description: Takes in a char and checks if the character is a numeric.
-  Returns a non-zero value if the char is numeric. Returns 0 if the char is
- non-numeric.*/
+/* Description: Takes in a char and checks if the character is a numeric.
+   Returns a non-zero value if the char is numeric. Returns 0 if the char is
+   non-numeric.*/
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return (('0' <= c && c <= '9'));
 }
