@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 /* Description: takes in a char and checks if the character is an alphabet.
-   Returns a non-zero value if the char is an alphabet. Returns 0 if the char is
-   non-alphabetical. */
+   Returns a non-zero value if the char is an alphabet. Returns 0 if the char 
+   is non-alphabetical. */
 
 #include "libft.h"
 

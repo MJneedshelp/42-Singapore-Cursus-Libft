@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/16 18:35:08 by mintan           ###   ########.fr       */
+/*   Created: 2024/05/14 13:28:41 by mintan            #+#    #+#             */
+/*   Updated: 2024/05/16 18:38:04 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+/* Description: takes in a char and checks if the character is printable. 
+   32 <= Printable characters <= 126. Returns a non-zero value if the char is 
+   printable. Returns 0 if the char is non-printable. */
 
-/* Validation Functions*/
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
+#include "libft.h"
 
-/* String Manipulation Functions*/
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-
-#endif
+int	ft_isprint(int c)
+{
+	return (32 <= c && c < 127);
+}
