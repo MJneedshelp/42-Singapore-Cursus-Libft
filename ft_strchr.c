@@ -27,21 +27,22 @@ static	int	ft_strlen(const char *str)
 }
 */
 
-/* Description: This returns a pointer to the first occurrence of the 
+/* Description: This returns a pointer to the first occurrence of the
    character c in the string str, or NULL if the character is not found. */
 
 char	*ft_strchr(const char *str, int c)
 {
 	while (*str != '\0')
 	{
-		printf("At this char now: %c\n", *str);
-		printf("%p\n", str);
 		if (*str == c)
 		{
-			printf("At this char now: %c\n", *str);
 			return ((char *)(str));
 		}
 		str++;
+	}
+	if (c == '\0')
+	{
+			return ((char *)(str));
 	}
 	return (NULL);
 }

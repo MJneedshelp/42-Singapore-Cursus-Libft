@@ -11,19 +11,29 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include "libft.h"
 
 int main(void)
 {
 	printf("--------------ft_strchr test--------------\n");
-	const char *str = "MJ is awesome? anyway...";
-	char	find = 'a';
-	char	*result;
+	const char str[] = "MJ is awesome? anyway...";
+	const char find = 'a';
+	char	*res;
+	char	*expres;
 
-	result = ft_strchr(str, find);
+/*
+	res = strchr(str, find);
 	printf("Input string: %s\n", str);
-	printf("%c\n", result);
-	printf("%p\n", result);
-	printf("String after |%c|: |%s|\n", find, result);
+	printf("%c\n", *res);
+	printf("%p\n", res);
+	printf("String after |%c|: |%s|\n", find, res);
+*/
+
+
+	res = ft_strchr(str, 0);
+	expres = strchr(str, 0);
+	printf("Input string: %s | Char to find: %c\n", str, find);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
 }

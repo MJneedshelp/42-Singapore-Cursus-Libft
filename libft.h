@@ -23,7 +23,7 @@ int ft_isprint(int c);
 /* String Manipulation Functions*/
 int	ft_toupper(int c);
 int	ft_tolower(int c);
-char	*strchr(const char *str, int c);
+char	*ft_strchr(const char *str, int c);
 
 
 #endif
