@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 23:34:18 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/16 23:34:18 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/17 21:24:16 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (0 <= c && c <= 127);
+	return (0 <= c && c <= 127);
 }
-
-
