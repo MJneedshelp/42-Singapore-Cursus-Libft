@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+/* Description: Computes the length of the string up to, but not include the
+   null terminating character. */
+
 #include "libft.h"
 
 int main(void)
@@ -20,7 +21,7 @@ int main(void)
 	const char str1[] = "1234567890";
 	const char str2[] = "";
 	size_t	len;
-	
+
 	len = ft_strlen(str1);
 	printf("Input string: %s | Expected Len: %lu | Actual Len: %lu\n", str1, strlen(str1), len);
 	len = ft_strlen(str2);
