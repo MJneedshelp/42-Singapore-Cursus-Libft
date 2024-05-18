@@ -6,9 +6,13 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/17 22:25:24 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 11:54:59 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<ctype.h>
+#include<string.h>
+#include<stdio.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -25,5 +29,6 @@ int	ft_toupper(int c);
 int	ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+
 
 #endif
