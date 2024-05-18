@@ -24,6 +24,6 @@ int ft_isprint(int c);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);
-
+char	*ft_strrchr(const char *str, int c);
 
 #endif

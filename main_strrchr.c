@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strchr.c                                      :+:      :+:    :+:   */
+/*   main_strrchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,29 +16,29 @@
 
 int main(void)
 {
-	printf("--------------ft_strchr test--------------\n");
+	printf("--------------ft_strrchr test--------------\n");
 	const char str[] = "MJ is awesome? anyway...";
 	char	find;
 	char	*res;
 	char	*expres;
 
 	find = 'a';
-	res = ft_strchr(str, find);
-	expres = strchr(str, find);
-	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str, find);
+	res = ft_strrchr(str, find);
+	expres = strrchr(str, find);
+	printf("Input string: %s | Char to find: %c | Print the remaining string after the last found occurence\n", str, find);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
 
-	res = ft_strchr(str, 0);
-	expres = strchr(str, 0);
-	printf("Input string: %s | Char to find: %d | Print the remaining string after the first found occurence\n", str, 0);
+	res = ft_strrchr(str, 0);
+	expres = strrchr(str, 0);
+	printf("Input string: %s | Char to find: %d | Print the remaining string after the last found occurence\n", str, 0);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
 
 	find = 'z';
-	res = ft_strchr(str, find);
-	expres = strchr(str, find);
-	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str, find);
+	res = ft_strrchr(str, find);
+	expres = strrchr(str, find);
+	printf("Input string: %s | Char to find: %c | Print the remaining string after the last found occurence\n", str, find);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
 }
