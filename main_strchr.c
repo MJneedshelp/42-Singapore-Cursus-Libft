@@ -18,21 +18,26 @@ int main(void)
 {
 	printf("--------------ft_strchr test--------------\n");
 	const char str[] = "MJ is awesome? anyway...";
-	const char find = 'a';
+	char	find;
 	char	*res;
 	char	*expres;
 
-/*
-	res = strchr(str, find);
-	printf("Input string: %s\n", str);
-	printf("%c\n", *res);
-	printf("%p\n", res);
-	printf("String after |%c|: |%s|\n", find, res);
-*/
-
+	find = 'a';
+	res = ft_strchr(str, find);
+	expres = strchr(str, find);
+	printf("Input string: %s | Char to find: %c\n", str, find);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
 
 	res = ft_strchr(str, 0);
 	expres = strchr(str, 0);
+	printf("Input string: %s | Char to find: %d\n", str, 0);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
+
+	find = 'z';
+	res = ft_strchr(str, find);
+	expres = strchr(str, find);
 	printf("Input string: %s | Char to find: %c\n", str, find);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
