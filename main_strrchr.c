@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strrchr.c                                      :+:      :+:    :+:   */
+/*   main_strrchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:44:28 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/17 22:59:38 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 10:31:40 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(void)
 {
 	printf("--------------ft_strrchr test--------------\n");
-	const char str[] = "MJ is awesome? anyway...";
+	const char str[] = "!MJ is awesome? anyway...?";
 	char	find;
 	char	*res;
 	char	*expres;
@@ -34,6 +34,21 @@ int main(void)
 	printf("Input string: %s | Char to find: %d | Print the remaining string after the last found occurence\n", str, 0);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
+	
+	find = '?';
+	res = ft_strrchr(str, find);
+	expres = strrchr(str, find);
+	printf("Input string: %s | Char to find: %c | Print the remaining string after the last found occurence\n", str, find);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
+
+	find = '!';
+	res = ft_strrchr(str, find);
+	expres = strrchr(str, find);
+	printf("Input string: %s | Char to find: %c | Print the remaining string after the last found occurence\n", str, find);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
+
 
 	find = 'z';
 	res = ft_strrchr(str, find);

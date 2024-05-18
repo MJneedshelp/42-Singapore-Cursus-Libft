@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/17 22:46:54 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 10:42:11 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	if (c == '\0')
 	{
-			return ((char *)(str));
+		return ((char *)(str));
 	}
 	return (NULL);
 }
