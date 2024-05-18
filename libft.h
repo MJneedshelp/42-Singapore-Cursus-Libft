@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/18 11:54:59 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 13:50:38 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
 
-/* String Manipulation Functions*/
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+/* String Characteristic Functions */
+size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 
+/* String Manipulation Functions */
+int	ft_toupper(int c);
+int	ft_tolower(int c);
 
 #endif

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/18 12:41:07 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 15:09:51 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: Calculates the length of a given string.Does not include the
-   null character '\0'. */
-
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+/*
+static	int	ft_strlen(const char *str)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	while (str[count] != '\0')
@@ -25,4 +23,26 @@ size_t	ft_strlen(const char *str)
 		count++;
 	}
 	return (count);
+}
+*/
+
+/* Description: Compare at most the first n bytes of str1 and str2 (Diff 
+   between the ASCII values of each char).
+   Return value < 0: str1 is less than str2
+   Return value > 0: str1 is more than str2
+   Return value = 0: str1 == str2
+ */
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (*s1 == *s2 && i < n && *s1 != '\0')
+	{
+		s1++;
+		s2++;
+		i++;
+	}
+	return (*s1 - *s2);
 }
