@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/18 11:23:28 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/18 12:41:07 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Description: appends up to (size - 1 - len(dst)) characters from source to
+   destination. The destination string is always null terminated if size > 0.
+   Returns the length of the src string to detect truncation:
+	- provided size < src length */
+
 #include "libft.h"
 
-/* Description: This returns a pointer to the last occurrence of the
-   character c in the string str, or NULL if the character is not found. */
-
-char	*ft_strrchr(const char *str, int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			len;
+	size_t	i;
 
-	len = ft_strlen(str);
-	str = str + len - 1;
-	if (c == 0)
-		return ((char *)(str + 1));
-	while (len > 0)
+	i = ft_strlen(dst);
+	if (size <= i)
+		return (ft_strlen(src) + ft_strlen(dst));
+	while (*src != '\0' && i < size -1)
 	{
-		if (*str == c)
-		{
-			return ((char *)(str));
-		}
-		str--;
-		len--;
+		dst[i] = *src;
+		i++;
+		src++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (ft_strlen(src) + ft_strlen(dst));
 }
