@@ -34,7 +34,7 @@ int main(void)
 	printf("Input string: %s | Char to find: %d | Print the remaining string after the last found occurence\n", str, 0);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
-	
+
 	find = '?';
 	res = ft_strrchr(str, find);
 	expres = strrchr(str, find);
