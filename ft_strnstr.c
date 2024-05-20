@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/18 15:09:51 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/20 20:35:10 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 {
-	size_t nedlen;
-	size_t i;
+	size_t	nedlen;
+	size_t	i;
 
 	i = 0;
 	if (*needle == '\0')
