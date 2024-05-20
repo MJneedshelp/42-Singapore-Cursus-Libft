@@ -10,12 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: fills the first n bytes of the memory area pointed to by s 
-   with the constant byte c. Returns a pointer to the memory area s */
+/* Description: fills the first n bytes of the memory area pointed to by s
+   with the constant byte c. Returns a pointer to the memory area s.
+   The void pointer is cast as an unsigned char (1 byte) so that each byte can
+   be assigned*/
 
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	
+	unsigned char	*p;
+
+	p = (unsigned char*)(s);
+
+	while (n--)
+	{
+		*p = (unsigned char)(c);
+		p++;
+	}
+	return (s);
 }
