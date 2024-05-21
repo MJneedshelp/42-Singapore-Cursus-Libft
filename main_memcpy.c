@@ -49,20 +49,6 @@ int	main(void)
 	dest5 = str;
 	dest6 = str;
 
-	/*
-	char	str1[50] = "1233456789 123456789 123456789";
-	char	str2[50] = "1233456789 123456789 123456789";
-	int		n = 10;
-	int		arr1[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	int		arr2[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	int		arr3[] = {55555555, 55555555, 55555555};
-	int		arr4[] = {55555555, 55555555, 55555555};
-	void	*ptr1;
-	void	*ptr2;
-	struct	test_struct struct1;
-	struct	test_struct struct2;
-	*/
-
 	printf("Run memcpy on a string. Src: %s. Use n = 10xSizeOf(char). Original dest: %s\n", src1, dest1);
 	ptr1 = memcpy(dest1, src1, 10*(sizeof(char)));
 	ptr2 = ft_memcpy(dest2, src1, 10*(sizeof(char)));
@@ -83,21 +69,5 @@ int	main(void)
 	printf("memcpy overlap: %s\n", dest5);
 	ft_memcpy(dest6 + 8, dest6, 13);
 	printf("ft_memcpy overlap: %s\n", dest6);
-
-
-	/*
-	printf("\nRun memcpy on string. Use n = 10xSizeOf(char). Original string: %s\n", str1);
-	ptr1 = memcpy(str1, 0, 10*(sizeof(char)));
-	ptr2 = memcpy(str2, 0, 10*(sizeof(char)));
-	printf("Expected results: %s\n", (char *)ptr1);
-	printf("Actual results: %s\n", (char *)ptr2);
-
-	printf("Run memcpy on a struct. Use n = SizeOf(struct). Struct contains 1 int, 1 float, 1 string\n");
-	memcpy(&struct1, 0, (sizeof(struct1)));
-	memcpy(&struct2, 0, (sizeof(struct2)));
-	printf("Expected results: int: %d, float: %f, string: %s\n", struct1.i, struct1.j, struct1.k);
-	printf("Actual results: int: %d, float: %f, string: %s\n", struct2.i, struct2.j, struct2.k);
-	*/
-
 	return (0);
 }

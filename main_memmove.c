@@ -64,7 +64,6 @@ int	main(void)
 	struct	test_struct struct2;
 	*/
 
-	/*
 	printf("Run memmove on a string. Src: %s. Use n = 10xSizeOf(char). Original dest: %s\n", src1, dest1);
 	ptr1 = memmove(dest1, src1, 10*(sizeof(char)));
 	ptr2 = ft_memmove(dest2, src1, 10*(sizeof(char)));
@@ -79,7 +78,7 @@ int	main(void)
 	printarray(ptr1, 6);
 	printf("\nActual results: ");
 	printarray(ptr2, 6);
-	*/
+	
 	printf("\nOriginal string: %s\n", str1);
 	memmove(dest5 + 8, dest5, 13);
 	printf("memmove overlap: %s\n", dest5);
