@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memset.c                                      :+:      :+:    :+:   */
+/*   main_memcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:38:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/21 14:50:20 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/21 15:09:26 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	printarray(int arr[], int n)
 	}
 }
 
-struct test_struct
+struct s_test_struct
 {
 	int		i;
 	double	j;
@@ -33,7 +33,18 @@ struct test_struct
 
 int	main(void)
 {
-	printf("--------------ft_memset test--------------\n");
+	printf("--------------ft_memcpy test--------------\n");
+	char	src1[] = "123456789";
+	char	dest1[50];
+	char	dest2[50];
+	int		src2[] = {1, 1, 1};
+	int		dest3[] = {0, 0, 0, 1, 1, 1};
+	int		dest4[] = {0, 0, 0, 1, 1, 1}; 
+
+	void	*ptr1;
+	void	*ptr2;
+
+	/*
 	char	str1[50] = "1233456789 123456789 123456789";
 	char	str2[50] = "1233456789 123456789 123456789";
 	int		n = 10;
@@ -45,36 +56,36 @@ int	main(void)
 	void	*ptr2;
 	struct	test_struct struct1;
 	struct	test_struct struct2;
+	*/
 
-	printf("Run memset on array of int. Use n = 5xSizeOf(int). Original array: ");
-	printarray(arr1, n);
-	ptr1 = memset(arr1, 0, 5*(sizeof(int)));
-	ptr2 = ft_memset(arr2, 0, 5*(sizeof(int)));
+	printf("Run memcpy on a string. Src: %s. Use n = 10xSizeOf(char). Original dest: %s\n", src1, dest1);
+	ptr1 = memcpy(dest1, src1, 10*(sizeof(char)));
+	ptr2 = ft_memcpy(dest2, src1, 10*(sizeof(char)));
+	printf("Expected results: %s\n", dest1);
+	printf("Actual results: %s\n", dest2);
+
+	printf("Run memcpy on array of int. Use n = 3xSizeof(int). Original dest: ");
+	printarray(dest3, 6);
+	ptr1 = memcpy(dest3, src2, 3*(sizeof(int)));
+	ptr2 = ft_memcpy(dest4, src2, 3*(sizeof(int)));
 	printf("\nExpected results: ");
-	printarray(ptr1, n);
+	printarray(ptr1, 6);
 	printf("\nActual results: ");
-	printarray(ptr2, n);
+	printarray(ptr2, 6);
 
-	printf("\nRun memset on array of int. Use n = 6. Original array: ");
-	printarray(arr3, 3);
-	ptr1 = memset(arr3, 0, 6);
-	ptr2 = ft_memset(arr4, 0, 6);
-	printf("\nExpected results: ");
-	printarray(ptr1, 3);
-	printf("\nActual results: ");
-	printarray(ptr2, 3);
-
-	printf("\nRun memset on string. Use n = 10xSizeOf(char). Original string: %s\n", str1);
-	ptr1 = memset(str1, 0, 10*(sizeof(char)));
-	ptr2 = ft_memset(str2, 0, 10*(sizeof(char)));
+	/*
+	printf("\nRun memcpy on string. Use n = 10xSizeOf(char). Original string: %s\n", str1);
+	ptr1 = memcpy(str1, 0, 10*(sizeof(char)));
+	ptr2 = memcpy(str2, 0, 10*(sizeof(char)));
 	printf("Expected results: %s\n", (char *)ptr1);
 	printf("Actual results: %s\n", (char *)ptr2);
 
-	printf("Run memset on a struct. Use n = SizeOf(struct). Struct contains 1 int, 1 float, 1 string\n");
-	memset(&struct1, 0, (sizeof(struct1)));
-	ft_memset(&struct2, 0, (sizeof(struct2)));
+	printf("Run memcpy on a struct. Use n = SizeOf(struct). Struct contains 1 int, 1 float, 1 string\n");
+	memcpy(&struct1, 0, (sizeof(struct1)));
+	memcpy(&struct2, 0, (sizeof(struct2)));
 	printf("Expected results: int: %d, float: %f, string: %s\n", struct1.i, struct1.j, struct1.k);
 	printf("Actual results: int: %d, float: %f, string: %s\n", struct2.i, struct2.j, struct2.k);
+	*/
 
 	return (0);
 }

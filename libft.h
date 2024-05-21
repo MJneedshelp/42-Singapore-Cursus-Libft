@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/20 21:23:04 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/21 14:49:46 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /* Memory Manipulation Functions */
 void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
