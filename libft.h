@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 10:04:13 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/22 11:17:56 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <ctype.h>
 # include <string.h>
 # include <stdio.h>
+# include <stdlib.h>
 
 /* Validation Functions*/
 int		ft_isalpha(int c);
@@ -36,6 +37,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int		ft_atoi(const char *str);
 
 /* Memory Manipulation Functions */
 void	*ft_memset(void *s, int c, size_t n);
