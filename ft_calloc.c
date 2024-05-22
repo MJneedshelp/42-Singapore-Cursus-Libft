@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: allocates memory for an array of nmemb elements and of size 
+/* Description: allocates memory for an array of nmemb elements and of size
    bytes each and returns a pointer to the allocated memory. The memory is set
-   to zero. Returns NULL or a unique pointer value that can be free() if nmemb 
+   to zero. Returns NULL or a unique pointer value that can be free() if nmemb
    or size is 0. Returns error if nmemb x size results in integer overflow. */
 
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-
+	size_t n;
 }
