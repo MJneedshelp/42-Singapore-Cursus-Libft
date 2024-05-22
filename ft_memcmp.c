@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:13:34 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 10:00:56 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/22 10:15:56 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: scans the initial n bytes of the memory area pointed to by s
-   for the first instance of c. Both c and the bytes of the memory area
-   pointed to by s are interpreted as unsigned char. Returns a pointer to the
-   matching to the matching byte or NULL if the char is not in the memory area.
-   */
+/* Description: compares the first n bytes (each interpreted as unsigned char)
+   of the memory areas s1 and s2. Returns an integer:
+   - < 0: s1 - s2 < 0
+   - = 0: s1 - s2 = 0
+   - > 0: s1 - s2 > 0
+ */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*x;
+	unsigned char	*y;
 
-	x = (unsigned char *)(s);
+	x = (unsigned char *)(s1);
+	y = (unsigned char *)(s2);
 	while (n--)
 	{
-		if (*x == c)
-			return ((void *)(x));
+		if (*x != *y)
+			return (*x - *y);
 		x++;
+		y++;
 	}
-	return (NULL);
+	return (0);
 }
