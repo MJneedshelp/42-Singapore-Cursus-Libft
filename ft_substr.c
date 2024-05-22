@@ -10,11 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: Allocates with malloc(3) and returns a substring from the 
+/* Description: Allocates with malloc(3) and returns a substring from the
    string s. The substring begins at index 'start' and is of the maximum size
-   'len'.
-*/
+   'len'. */
 
 #include "libft.h"
 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*ptr;
+	size_t	i;
+
+	i = 0;
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	ft_memcpy(ptr, (s + start), len);
+	*(ptr + len) = '\0';
+	return (ptr);
+}
 
