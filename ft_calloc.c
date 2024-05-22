@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 12:59:27 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 13:07:24 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/22 14:49:11 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t n;
+	void	*ptr;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(nmemb * size);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }
