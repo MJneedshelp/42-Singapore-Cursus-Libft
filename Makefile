@@ -6,7 +6,7 @@
 #    By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/15 22:10:59 by mintan            #+#    #+#              #
-#    Updated: 2024/05/16 15:30:45 by mintan           ###   ########.fr        #
+#    Updated: 2024/05/22 16:33:02 by mintan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,17 +15,17 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra -c
 
 # Definitions
-LIBRARY = libft.a
+NAME = libft.a
 SOURCES = $(wildcard *.c)
 OBJECTS = $(SOURCES:.c=.o)
 
 # Target to make using Make all
-all: $(LIBRARY)
+all: $(NAME)
 
 # Rule to create the LIBRARY
 # r > add specified files into ar | c > create archive| s > write index to ar
 # "@" > Target | "^" > Prerequisites
-$(LIBRARY): $(OBJECTS)
+$(NAME): $(OBJECTS)
 	echo "making the library now"
 	ar rcs $@ $^
 
@@ -37,9 +37,15 @@ $(LIBRARY): $(OBJECTS)
 
 # Clear the build files	
 clean:
-	rm -f $(LIBRARY) $(OBJECTS)
+	rm -f $(OBJECTS)
+
+fclean: clean
+	rm -f $(NAME)
+
+# Rule to rebuild the target
+re:	fclean all
 
 # Phony targets
-.PHONY: all clean
+.PHONY: all clean re
 
 
