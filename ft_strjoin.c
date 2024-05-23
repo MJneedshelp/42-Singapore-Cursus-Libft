@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:48:03 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 17:26:25 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:53:28 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*(ptr + len1 + len2) = '\0';
 	return (ptr);
 }
-
