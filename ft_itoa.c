@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c               	                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:48:03 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/23 18:52:25 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/24 19:57:00 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* Description: finds the number of digits in an int. */
-static int	findlen(int n, int strlen)
+static int	findlen(long l, int strlen)
 {
-	if (n < 0)
+	if (l < 0)
 	{
 		strlen++;
-		n = -n;
+		l = -l;
 	}
-	while (n > 9)
+	while (l > 9)
 	{
-		n = n / 10;
+		l = l / 10;
 		strlen++;
 	}
 	return (strlen);
@@ -61,7 +61,6 @@ static char	*myitoa(long l, int len, char *ret)
 	return (ret);
 }
 
-
 /* Description: Allocates with malloc(3) and returns a string representing
    the integer received as an argument. Also handles negative numbers. */
 
@@ -69,21 +68,15 @@ char	*ft_itoa(int n)
 {
 	char	*ret;
 	int		strlen;
-	char	c;
 	long	l;
 
 	l = (long) n;
 	strlen = 1;
 	strlen = findlen(l, strlen);
-	ret = (char*)malloc((strlen + 1)* sizeof(char));
+	ret = (char *)malloc((strlen + 1) * sizeof(char));
 	if (ret == NULL)
 		return (NULL);
 	ret[strlen] = '\0';
 	ret = myitoa(l, strlen, ret);
 	return (ret);
 }
-
-	//check negative -> done
-	//find number of digits -> divide by 10 until the number <= 9 -> done
-	//malloc number of spaces -> done
-	//recursively fill in the string array

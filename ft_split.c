@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:48:03 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/23 18:52:25 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/24 20:02:09 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	countwrds(char const *s, char c)
 /* Description: Moves the str pointer to the start of a character after the
 delimiter. Stops before the '\0'. */
 
-static const char *findwrdstrt(char const *s, char c)
+static const char	*findwrdstrt(char const *s, char c)
 {
 	while (*s == c && *s != '\0')
 		s++;
@@ -65,9 +65,10 @@ static size_t	findwrdlen(char const *s, char c)
 /* Description: free all the elements in the arr if any malloc fails.
 */
 
-static void freeall(char **arr, int n)
+static void	freeall(char **arr, int n)
 {
 	int	i;
+
 	i = 0;
 	while (i <= n)
 	{
@@ -75,7 +76,6 @@ static void freeall(char **arr, int n)
 		i++;
 	}
 }
-
 
 /* Description: Allocates with malloc(3) and returns an array of strings
    obtained by spliting 's' using the character 'c' as a delimiter. The
@@ -89,7 +89,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	numwrd = countwrds(s, c);
-	ret = (char **)malloc((numwrd + 1) * sizeof(char*));
+	ret = (char **)malloc((numwrd + 1) * sizeof(char *));
 	if (ret == NULL)
 		return (NULL);
 	while (i < numwrd)
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 		ret[i] = ft_substr(s, 0, findwrdlen(s, c));
 		if (ret[i] == NULL)
 		{
-			freeall;
+			freeall(ret, i);
 			free(ret);
 			return (NULL);
 		}
