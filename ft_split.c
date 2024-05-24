@@ -13,7 +13,7 @@
 #include "libft.h"
 
 
-/* Description: Find the first index where s1 does not match any character in 
+/* Description: Find the first index where s1 does not match any character in
    the set.   */
 /*
 static size_t	findfst(char const *s1, char const *set, size_t len)
@@ -39,32 +39,42 @@ static size_t	findfst(char const *s1, char const *set, size_t len)
 }
 */
 
-/* Description: counts the number of words after the word is separated 
-   by the delimiter. */
+/* Description: counts the number of words after the word is separated
+   by the delimiter. Counts the number of transitions from delimiter
+   to non-delimiter. */
 
-static int	countwrds(s, c)
+static int	countwrds(char const *s, char c)
 {
 	int		count;
-	size_t	len;
+	int		i;
 
 	count = 0;
-	len = ft_strlen(s);
-
-
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (i == 0 && s[i] != c)
+			count++;
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+			count++;
+		i++;
+	}
 	return (count);
 }
 
 
-/* Description: Allocates with malloc(3) and returns an array of strings 
-   obtained by spliting 's' using the character 'c' as a delimiter. The 
+/* Description: Allocates with malloc(3) and returns an array of strings
+   obtained by spliting 's' using the character 'c' as a delimiter. The
    array must end with a NULL pointer. */
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	int		numword;
+	int		arrnum;
 
-	numword = countwrds(s, c);
+	arrnum = countwrds(s, c) + 1;
+	//printf("Inside split now. No. of words: %d\n", arrnum);
+
+	return (NULL);
 
 
 	//find no. of array of pointers
