@@ -12,6 +12,31 @@
 
 #include "libft.h"
 
+void printarr(char **arr)
+{
+	size_t i;
+	i = 0;
+	while (*arr != NULL)
+		{
+			printf("arr index: %lu | word: %s\n", i, *arr);
+			arr++;
+			i++;
+		}
+}
+
+/*
+void printarr(char **arr)
+{
+	size_t i;
+	i = 0;
+	while (arr[i] != NULL)
+		{
+			printf("Word: %s\n", arr[i]);
+			i++;
+		}
+}
+*/
+
 int	main(void)
 {
 	printf("--------------ft_split test--------------\n");
@@ -26,25 +51,32 @@ int	main(void)
 
 	printf("Source: %s | delim: %c\n", s1, delim);
 	res = ft_split(s1, delim);
+	printf("Results:\n");
+	printarr(res);
 
-
-	printf("Source: %s | delim: %c\n", s2, delim);
+	printf("\nSource: %s | delim: %c\n", s2, delim);
 	res = ft_split(s2, delim);
+	printf("Results:\n");
+	printarr(res);
 
-
-	printf("Source: %s | delim: %c\n", s3, delim);
+	printf("\nSource: %s | delim: %c\n", s3, delim);
 	res = ft_split(s3, delim);
+	printf("Results:\n");
+	printarr(res);
 
-
-	printf("Source: %s | delim: %c\n", s4, delim);
+	printf("\nSource: %s | delim: %c\n", s4, delim);
 	res = ft_split(s4, delim);
+	printf("Results:\n");
+	printarr(res);
 
-
-	printf("Source: %s | delim: %c\n", s5, delim);
+	printf("\nSource: %s | delim: %c\n", s5, delim);
 	res = ft_split(s5, delim);
+	printf("Results:\n");
+	printarr(res);
 
-
-	printf("Source: %s | delim: %c\n", s6, delim);
+	printf("\nSource: %s | delim: %c\n", s6, delim);
 	res = ft_split(s6, delim);
+	printf("Results:\n");
+	printarr(res);
 	return (0);
 }

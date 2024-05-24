@@ -12,41 +12,14 @@
 
 #include "libft.h"
 
-
-/* Description: Find the first index where s1 does not match any character in
-   the set.   */
-/*
-static size_t	findfst(char const *s1, char const *set, size_t len)
-{
-	size_t	i;
-	size_t	j;
-	size_t	setlen;
-
-	i = 0;
-	setlen = ft_strlen(set);
-	while (i < len)
-	{
-		j = 0;
-		while (j < setlen && set[j] != s1[i])
-		{
-			j++;
-		}
-		if (set[j] != s1[i])
-			return (i);
-		i++;
-	}
-	return (i);
-}
-*/
-
 /* Description: counts the number of words after the word is separated
    by the delimiter. Counts the number of transitions from delimiter
    to non-delimiter. */
 
 static int	countwrds(char const *s, char c)
 {
-	int		count;
-	int		i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
@@ -61,6 +34,48 @@ static int	countwrds(char const *s, char c)
 	return (count);
 }
 
+/* Description: Moves the str pointer to the start of a character after the
+delimiter. Stops before the '\0'. */
+
+static const char *findwrdstrt(char const *s, char c)
+{
+	while (*s == c && *s != '\0')
+		s++;
+	return (s);
+}
+
+/* Description: Counts the len of the word based on the current position of
+   the string. Checks when a delimiter or '\0' is reached. */
+
+static size_t	findwrdlen(char const *s, char c)
+{
+	size_t	count;
+	int		i;
+
+	count = 1;
+	i = 0;
+	while (s[i + 1] != c && s[i + 1] != '\0')
+	{
+		i++;
+		count++;
+	}
+	return (count);
+}
+
+/* Description: free all the elements in the arr if any malloc fails.
+*/
+
+static void freeall(char **arr, int n)
+{
+	int	i;
+	i = 0;
+	while (i <= n)
+	{
+		free(arr[i]);
+		i++;
+	}
+}
+
 
 /* Description: Allocates with malloc(3) and returns an array of strings
    obtained by spliting 's' using the character 'c' as a delimiter. The
@@ -69,18 +84,36 @@ static int	countwrds(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	int		arrnum;
+	int		numwrd;
+	int		i;
 
-	arrnum = countwrds(s, c) + 1;
-	//printf("Inside split now. No. of words: %d\n", arrnum);
-
-	return (NULL);
-
-
-	//find no. of array of pointers
-	//-> countwrds (s, c)
-	//malloc array of pointers
-	//for each ptr in array -> substr to copy out
-	//have to free everything if any of the small malloc fails -> can use the pointers in the array to free
-
+	i = 0;
+	numwrd = countwrds(s, c);
+	ret = (char **)malloc((numwrd + 1) * sizeof(char*));
+	if (ret == NULL)
+		return (NULL);
+	while (i < numwrd)
+	{
+		s = findwrdstrt(s, c);
+		ret[i] = ft_substr(s, 0, findwrdlen(s, c));
+		if (ret[i] == NULL)
+		{
+			freeall;
+			free(ret);
+			return (NULL);
+		}
+		s = s + findwrdlen(s, c);
+		i++;
+	}
+	ret[i] = NULL;
+	return (ret);
 }
+
+		//find start and len of word -> done
+			//fx to move str to start of word -> done
+			//fx to count len of word -> done
+		//ft_substring of word into char* -> done
+			//if char* == NULL, fx to free all and break out of loop
+			//free the big malloc
+		//move the word start to end of the word -> done
+
