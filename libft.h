@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/23 18:16:22 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/24 21:26:17 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s2, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /* Memory Manipulation Functions */
 void	*ft_memset(void *s, int c, size_t n);
