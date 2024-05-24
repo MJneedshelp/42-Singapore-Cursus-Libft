@@ -108,7 +108,6 @@ char	**ft_split(char const *s, char c)
 	ret[i] = NULL;
 	return (ret);
 }
-
 		//find start and len of word -> done
 			//fx to move str to start of word -> done
 			//fx to count len of word -> done
@@ -116,4 +115,3 @@ char	**ft_split(char const *s, char c)
 			//if char* == NULL, fx to free all and break out of loop
 			//free the big malloc
 		//move the word start to end of the word -> done
-
