@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:13:34 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/21 20:40:06 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/25 17:21:03 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* Other code
+/*
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	temp[n];

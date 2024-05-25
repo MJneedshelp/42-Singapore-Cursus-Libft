@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 10:30:53 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/25 15:39:46 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/25 15:57:43 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 static void	ft_putlongnbr_fd(long l, int fd)
 {
 	char	ascii_c;
-	
-	printf("Inside putlongnbr now: Current n: %ld\n", l);
 
 	if (l < 0)
 	{
@@ -33,7 +31,6 @@ static void	ft_putlongnbr_fd(long l, int fd)
 	else
 	{
 		ascii_c = l + 48;
-		printf("A calc step now. ascii_c: %c | l: %ld\n", ascii_c, l);
 		ft_putchar_fd(ascii_c, fd);
 	}
 }

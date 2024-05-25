@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:13:34 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/21 14:48:34 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/25 16:56:29 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	x = (unsigned char *)(dest);
 	y = (unsigned char *)(src);
-	while (n--)
+	if (dest == NULL && src == NULL)
+		return (dest);
+	else
 	{
-		*x = *y;
-		x++;
-		y++;
+		while (n--)
+		{
+			*x = *y;
+			x++;
+			y++;
+		}
 	}
 	return (dest);
 }
