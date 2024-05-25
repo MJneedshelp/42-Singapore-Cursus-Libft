@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/25 13:45:37 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/25 14:10:06 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ char	*ft_strdup(const char *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
