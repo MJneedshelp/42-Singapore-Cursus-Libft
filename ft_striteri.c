@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 20:49:54 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/24 21:45:59 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/25 10:23:23 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	len = ft_strlen(s);
-	printf("Inside ft_striteri now. Strlen: %lu\n", len);
 	while (i < len)
 	{
-		printf("i: %d | char: %c | address: %p\n", i, s[i], &s[i]);
 		f(i, &s[i]);
 		i++;
 	}
