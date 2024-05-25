@@ -14,17 +14,14 @@
 
 void	myfx1(unsigned int i, char *c)
 {
-//	char	t;
-//	t = *c + i;
 	printf("Inside myfx1 now. Address of char: %p | value of char: %c | i: %d\n", c, *c, i);
-//	*c += i;
+	//*c = *c + i;
+	printf("After problem line. Address of char: %p | value of char: %c | i: %d\n", c, *c, i);
 }
 
 void	myfx2(unsigned int i, char *c)
 {
-	char ret;
-
-	*c = *c - i;
+	//*c = *c - i;
 }
 
 int	main(void)
