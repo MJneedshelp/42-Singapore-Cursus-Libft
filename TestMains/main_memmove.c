@@ -24,13 +24,6 @@ void	printarray(int arr[], int n)
 	}
 }
 
-struct s_test_struct
-{
-	int		i;
-	double	j;
-	char	k[5];
-};
-
 int	main(void)
 {
 	printf("--------------ft_memmove test--------------\n");
@@ -42,27 +35,19 @@ int	main(void)
 	int		dest4[] = {0, 0, 0, 1, 1, 1};
 	char	str1[100] = "Learningisfun";
 	char	str2[100] = "Learningisfun";
+	char	str3[100] = "thi\xffs i\xfas \0a g\xde\xadood \0nyan\0cat\0 !\r\n";
+	char	str4[100] = "thi\xffs i\xfas \0a g\xde\xadood \0nyan\0cat\0 !\r\n";
 	char	*dest5;
 	char	*dest6;
+	char	*dest7;
+	char	*dest8;
 	void	*ptr1;
 	void	*ptr2;
 
 	dest5 = str1;
 	dest6 = str2;
-
-	/*
-	char	str1[50] = "1233456789 123456789 123456789";
-	char	str2[50] = "1233456789 123456789 123456789";
-	int		n = 10;
-	int		arr1[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	int		arr2[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	int		arr3[] = {55555555, 55555555, 55555555};
-	int		arr4[] = {55555555, 55555555, 55555555};
-	void	*ptr1;
-	void	*ptr2;
-	struct	test_struct struct1;
-	struct	test_struct struct2;
-	*/
+	dest7 = str3;
+	dest8 = str4;
 
 	printf("Run memmove on a string. Src: %s. Use n = 10xSizeOf(char). Original dest: %s\n", src1, dest1);
 	ptr1 = memmove(dest1, src1, 10*(sizeof(char)));
@@ -78,27 +63,18 @@ int	main(void)
 	printarray(ptr1, 6);
 	printf("\nActual results: ");
 	printarray(ptr2, 6);
-	
+
 	printf("\nOriginal string: %s\n", str1);
 	memmove(dest5 + 8, dest5, 13);
 	printf("memmove overlap: %s\n", dest5);
 	ft_memmove(dest6 + 8, dest6, 13);
 	printf("ft_memmove overlap: %s\n", dest6);
 
-
-	/*
-	printf("\nRun memmove on string. Use n = 10xSizeOf(char). Original string: %s\n", str1);
-	ptr1 = memmove(str1, 0, 10*(sizeof(char)));
-	ptr2 = memmove(str2, 0, 10*(sizeof(char)));
-	printf("Expected results: %s\n", (char *)ptr1);
-	printf("Actual results: %s\n", (char *)ptr2);
-
-	printf("Run memmove on a struct. Use n = SizeOf(struct). Struct contains 1 int, 1 float, 1 string\n");
-	memmove(&struct1, 0, (sizeof(struct1)));
-	memmove(&struct2, 0, (sizeof(struct2)));
-	printf("Expected results: int: %d, float: %f, string: %s\n", struct1.i, struct1.j, struct1.k);
-	printf("Actual results: int: %d, float: %f, string: %s\n", struct2.i, struct2.j, struct2.k);
-	*/
+	printf("\nOriginal string: %s\n", str3);
+	memmove(dest7 + 7, dest7, 14);
+	printf("memmove overlap: %s\n", dest7);
+	ft_memmove(dest8 + 7, dest8, 14);
+	printf("ft_memmove overlap: %s\n", dest8);
 
 	return (0);
 }

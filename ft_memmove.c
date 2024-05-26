@@ -32,10 +32,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	else
 	{
-		while (n > 0)
+		while (i != 0)
 		{
-			*(x + n) = *(y + n);
-			n--;
+			x[i - 1] = y[i - 1];
+			i--;
 		}
 	}
 	return (dest);
