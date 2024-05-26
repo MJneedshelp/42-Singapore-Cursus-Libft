@@ -38,7 +38,7 @@ int	main(void)
 	printf("nmemb: %lu. size: %lu\n", nmemb, size);
 	rese = calloc(nmemb, size);
 	resa = ft_calloc(nmemb, size);
-	resm = malloc(nmemb * size);	
+	resm = malloc(nmemb * size);
 	printf("Expected results using calloc:\n");
 	printarray(rese, nmemb);
 	printf("\nActual results using ft_calloc: \n");
@@ -51,26 +51,21 @@ int	main(void)
 	printf("\nnmemb: %lu. size: %lu\n", nmemb, size);
 	rese = calloc(nmemb, size);
 	resa = ft_calloc(nmemb, size);
-	resm = malloc(nmemb * size);	
-	printf("Expected results using calloc:\n");
-	printarray(rese, nmemb);
-	printf("\nActual results using ft_calloc: \n");
-	printarray(resa, nmemb);
-	printf("\nExpected results using malloc: \n");
-	printarray(resm, nmemb);
+	resm = malloc(nmemb * size);
+	printf("Expected results using calloc: %p\n", rese);
+	printf("\nActual results using ft_calloc: %p \n", resa);
+	printf("\nExpected results using malloc: %p\n", resm);
 
 	nmemb = 10;
 	size = 0;
 	printf("\nnmemb: %lu. size: %lu\n", nmemb, size);
 	rese = calloc(nmemb, size);
 	resa = ft_calloc(nmemb, size);
-	resm = malloc(nmemb * size);	
-	printf("Expected results using calloc:\n");
-	printarray(rese, nmemb);
-	printf("\nActual results using ft_calloc: \n");
-	printarray(resa, nmemb);
-	printf("\nExpected results using malloc: \n");
-	printarray(resm, nmemb);
+	resm = malloc(nmemb * size);
+	printf("Expected results using calloc: %p\n", rese);
+	printf("\nActual results using ft_calloc: %p \n", resa);
+	printf("\nExpected results using malloc: %p\n", resm);
+
 
 
 	return (0);

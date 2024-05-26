@@ -41,4 +41,11 @@ int main(void)
 	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str, find);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n", res);
+
+	find = 't' + 256;
+	res = ft_strchr(str, find);
+	expres = strchr(str, find);
+	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str, find);
+	printf("Expected results: %s\n", expres);
+	printf("Actual results: %s\n", res);
 }
