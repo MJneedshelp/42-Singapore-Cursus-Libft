@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:44:28 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/17 22:59:38 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:06:14 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void)
 	printf("--------------ft_strchr test--------------\n");
 	const char str1[] = "MJ is awesome? anyway...";
 	const char str2[] = "teste";
-	char	find;
+	int		find;
 	char	*res;
 	char	*expres;
 
@@ -43,14 +43,14 @@ int main(void)
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n\n", res);
 
-	find = 't' + 256;
-	res = ft_strchr(str1, find);
-	expres = strchr(str1, find);
+	find = 357;
+	res = ft_strchr(str2, find);
+	expres = strchr(str2, find);
 	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str1, find);
 	printf("Expected results: %s\n", expres);
 	printf("Actual results: %s\n\n", res);
 
-	find = 357;
+	find = 1024;
 	res = ft_strchr(str2, find);
 	expres = strchr(str2, find);
 	printf("Input string: %s | Char to find: %c | Print the remaining string after the first found occurence\n", str2, find);

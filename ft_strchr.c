@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/18 10:42:11 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:06:09 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,15 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	/* can try to convert the int c to a char by (char)(c % 256) first
-	   then comparing the char with *str*/
-
 	while (*str != '\0')
 	{
-		if (*str == c)
+		if (*str == (unsigned char)c)
 		{
 			return ((char *)(str));
 		}
 		str++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 	{
 		return ((char *)(str));
 	}
