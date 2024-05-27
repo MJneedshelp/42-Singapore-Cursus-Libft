@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 21:22:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 17:01:19 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 20:58:06 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,35 +30,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	if (*needle == '\0')
 		return ((char *)haystack);
-	nedlen = ft_strlen(needle);
-	while (i + nedlen <= len)
+	if (ft_strlen(haystack) > 0)
 	{
-		if (ft_strncmp(&haystack[i], needle, nedlen) == 0)
-			return ((char *)&haystack[i]);
-		i++;
-	}
-	return (NULL);
-}
-
-/* Old code:
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0', i < len)
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && i + j < len)
+		nedlen = ft_strlen(needle);
+		while (i + nedlen <= len)
 		{
-			if (needle[j + 1] == '\0')
-				return ((char *)(haystack + i));
-			j++;
+			if (ft_strncmp(&haystack[i], needle, nedlen) == 0)
+				return ((char *)&haystack[i]);
+			i++;
 		}
-		i++;
 	}
 	return (NULL);
 }
-*/
