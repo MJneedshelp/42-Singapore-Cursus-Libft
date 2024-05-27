@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* Description: Find the first index where s1 does not match any character in 
+/* Description: Find the first index where s1 does not match any character in
    the set.   */
 
 static size_t	findfst(char const *s1, char const *set, size_t len)
@@ -37,7 +37,7 @@ static size_t	findfst(char const *s1, char const *set, size_t len)
 	return (i);
 }
 
-/* Description: Find the last index where s1 does not match any character in 
+/* Description: Find the last index where s1 does not match any character in
    the set.   */
 
 static size_t	findlst(char const *s1, char const *set, size_t len)
@@ -54,16 +54,16 @@ static size_t	findlst(char const *s1, char const *set, size_t len)
 		while (j < setlen && set[j] != s1[len - 1])
 		{
 			j++;
-			if (set[j] != s1[len - 1])
-				return (len - 1);
 		}
+		if (set[j] != s1[len - 1])
+			return (len - 1);
 		len--;
 	}
 	return (len);
 }
 
-/* Description: Allocates with malloc(3) and returns a copy of 's1' with the 
-   characters specified in 'set' removed from the beginning and the end of the 
+/* Description: Allocates with malloc(3) and returns a copy of 's1' with the
+   characters specified in 'set' removed from the beginning and the end of the
    string. */
 
 char	*ft_strtrim(char const *s1, char const *set)
