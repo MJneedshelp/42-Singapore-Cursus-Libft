@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:13:34 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 10:00:56 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 19:53:09 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	x = (unsigned char *)(s);
 	while (n--)
 	{
-		if (*x == c)
+		if (*x == (unsigned char)c)
 			return ((void *)(x));
 		x++;
 	}
