@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 21:38:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/22 15:52:58 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 22:16:49 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,39 @@ int	main(void)
 
 	n = 4;
 	start = 0;
-	printf("Source: %s | start: %d | size: %d\n", src, start, n);
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
 	target = ft_substr(src, start, n);
 	printf("Results: %s\n", target);
 
 	n = 4;
 	start = 1;
-	printf("Source: %s | start: %d | size: %d\n", src, start, n);
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
 	target = ft_substr(src, start, n);
 	printf("Results: %s\n", target);
 
 	n = 10;
 	start = 0;
-	printf("Source: %s | start: %d | size: %d\n", src, start, n);
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
 	target = ft_substr(src, start, n);
 	printf("Results: %s\n", target);
 
 	n = 15;
 	start = 0;
-	printf("Source: %s | start: %d | size: %d\n", src, start, n);
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
 	target = ft_substr(src, start, n);
 	printf("Results: %s\n", target);
+
+	n = 15;
+	start = 15;
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
+	target = ft_substr(src, start, n);
+	printf("Results: %s\n", target);
+
+	n = 42000;
+	start = 0;
+	printf("Source: %s | start: %d | size: %lu\n", src, start, n);
+	target = ft_substr(src, start, n);
+	printf("Results: %s\n", target);
+
 	return (0);
 }

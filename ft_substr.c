@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:48:03 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/23 13:53:41 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/27 22:20:56 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	ft_memcpy(ptr, (s + start), len);
-	*(ptr + len) = '\0';
+	if (start < ft_strlen(s))
+	{
+		if (len < ft_strlen(s) - start)
+		{
+			ft_memcpy(ptr, (s + start), len);
+			*(ptr + len) = '\0';
+		}
+		else
+		{
+			ft_memcpy(ptr, (s + start), ft_strlen(s) - start);
+			*(ptr + ft_strlen(s) - start) = '\0';
+		}
+	}
+	else
+		*ptr = '\0';
 	return (ptr);
 }
