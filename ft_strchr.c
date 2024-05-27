@@ -17,6 +17,9 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	/* can try to convert the int c to a char by (char)(c % 256) first
+	   then comparing the char with *str*/
+
 	while (*str != '\0')
 	{
 		if (*str == c)

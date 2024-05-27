@@ -15,6 +15,9 @@
 /* Description: This returns a pointer to the last occurrence of the
    character c in the string str, or NULL if the character is not found. */
 
+   	/* can try to convert the int c to a char by (char)(c % 256) first
+	   then comparing the char with *str*/
+
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t			len;
