@@ -22,9 +22,9 @@ t_list	*ft_lstlast(t_list *lst)
 
 	size = ft_lstsize(lst);
 	last = lst;
-	if (size == 0)
+	if (size <= 1)
 		return (last);
-	while (size > 0)
+	while (size > 1)
 	{
 		last = last->next;
 		size--;

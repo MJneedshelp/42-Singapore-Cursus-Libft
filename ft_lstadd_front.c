@@ -19,8 +19,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-//	printf("Result of if(lst): %d\n", lst==NULL);
-//	printf("Result of if(new): %d\n", new==NULL);
 	if (lst && new)
 	{
 		new->next = *lst;
