@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 19:08:17 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/27 19:08:17 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/29 20:11:14 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
    - new: address of a pointer to the node to be added to the list
 */
 
-# include "libft.h"
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst || new)
+//	printf("Result of if(lst): %d\n", lst==NULL);
+//	printf("Result of if(new): %d\n", new==NULL);
+	if (lst && new)
 	{
 		new->next = *lst;
 		*lst = new;

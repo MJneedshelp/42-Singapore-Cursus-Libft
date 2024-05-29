@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 02:32:08 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/28 10:14:45 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/29 20:49:43 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,15 @@ int main(void)
 	printf("Added node 2 in front of node 1. New head: %p | Head pointed addr: %p | Content in new head: %s\n\n", head, *head, (char *)(*head)->content);
 
 	node3 = NULL;
-	ft_lstadd_front(head, node3);
-	printf("Try adding blank node 3 in front. Head: %p | Head pointed addr: %p | Content in head %s\n", head, *head, (char *)(*head)->content);
+	ft_lstadd_front(NULL, node2);
+	printf("Try adding blank to a blank list\n\n");
+	ft_lstadd_front(head, NULL);
+	printf("Try adding a blank to an existing list. Head: %p | Head pointed addr: %p | Content in head %s\n\n", head, *head, (char *)(*head)->content);
 
-
-
-	/*
-	printf("Content in the original head node: %s | Next ptr: %p\n\n", (char *)node1->content, node1->next);
-	printf("Content to be added into the new head node: %s\n", cntnt2);
-	printf("New head added. New head node content: %s | New head node Next ptr: %p\n\n", (char *)node2->content, node2->next);
-	printf("Use next of new head to find the next node. Next node content: %s | Next node Next ptr: %p\n\n", (char *)node2->next->content, node2->next->next);
-	node1->next = node2;
-	printf("No. of nodes in the list: %d\n\n", ft_lstsize(node2));
-*/
+	printf("List size empty list: %d\n\n", ft_lstsize(0));
+	printf("List size of current list: %d\n\n", ft_lstsize(*head));
+//	node1->next = node2;
+//	printf("List size of circular list: %d\n\n", ft_lstsize(*head));
+	
 	return (0);
 }
