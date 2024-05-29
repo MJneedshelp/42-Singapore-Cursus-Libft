@@ -19,16 +19,20 @@ int main(void)
 	t_list	*node1;
 	t_list	*node2;
 	t_list	*node3;
+	t_list	*node4;
+	t_list	*node5;
 	t_list	*lastnode;
 	char	*cntnt1 = "node 1";
 	char	*cntnt2 = "node 2";
+	char	*cntnt4 = "new last node";
+	char	*cntnt5 = "even newer last node";
 
-	node1 = ft_lstnew((void *)cntnt1);
+	node1 = ft_lstnew(cntnt1);
 	printf("node1next:%p\n", node1->next);
 	printf("Node 1 created. Address: %p | Content: %s\n", node1, (char *)node1->content);
 	head = node1;
 	printf("Head initialised to node 1. Head addr: %p | Head pointed addr: %p | Content in head node: %s\n", &head, head, (char *)head->content);
-	node2 = ft_lstnew((void *)cntnt2);
+	node2 = ft_lstnew(cntnt2);
 	printf("Node 2 created. Address: %p | Content: %s\n", node2, (char *)node2->content);
 	ft_lstadd_front(&head, node2);
 	printf("node1next:%p\n", node1->next);
@@ -45,11 +49,24 @@ int main(void)
 	lastnode = ft_lstlast(head);
 	printf("Last node content of current list: %s\n\n", (char *)lastnode->content);
 
-	node1->next = node2;
+	node4 = ft_lstnew(cntnt4);
+	printf("Node 4 created. Address: %p | Content: %s\n", node4, (char *)node4->content);
+	printf("Add node to the end of the list\n");
+	ft_listadd_back(&head, node4);
+	lastnode = ft_lstlast(head);
+	printf("Last node content of current list: %s\n\n", (char *)lastnode->content);
 
-	printf("Circular list: head: %s | next: %s | next: %s\n", (char *)head->content, (char *)head->next->content, (char *)head->next->next->content);
+	printf("Make list circular\n");
+	lastnode->next = head;
+	printf("Circular list: head: %s | next: %s | next: %s | next: %s\n", (char *)head->content, (char *)head->next->content, (char *)head->next->next->content, (char *)head->next->next->next->content);
 	printf("List size of circular list: %d\n", ft_lstsize(node2));
-	printf("Last node content of current list: %s\n\n", (char *)(ft_lstlast(head))->content);
+	printf("Last node content of circular list: %s\n", (char *)(ft_lstlast(head))->content);
+	node5 = ft_lstnew(cntnt5);
+	printf("Node 5 created. Address: %p | Content: %s\n", node5, (char *)node5->content);
+	printf("Add node to the end of the list\n");
+	ft_listadd_back(&head, node5);
+	lastnode = ft_lstlast(head);
+	printf("Last node content of current list: %s\n\n", (char *)lastnode->content);
 
 	return (0);
 }
