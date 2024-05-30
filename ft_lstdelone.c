@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 11:55:15 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/30 13:41:06 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/30 19:27:21 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free (lst);
+	if (lst)
+	{
+		del(lst->content);
+		free (lst);
+	}
 }
