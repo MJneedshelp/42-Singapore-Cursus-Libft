@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 02:32:08 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/29 22:40:12 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/30 09:13:11 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main(void)
 	node4 = ft_lstnew(cntnt4);
 	printf("Node 4 created. Address: %p | Content: %s\n", node4, (char *)node4->content);
 	printf("Add node to the end of the list\n");
-	ft_listadd_back(&head, node4);
+	ft_lstadd_back(&head, node4);
 	lastnode = ft_lstlast(head);
 	printf("Last node content of current list: %s\n\n", (char *)lastnode->content);
 
@@ -64,7 +64,7 @@ int main(void)
 	node5 = ft_lstnew(cntnt5);
 	printf("Node 5 created. Address: %p | Content: %s\n", node5, (char *)node5->content);
 	printf("Add node to the end of the list\n");
-	ft_listadd_back(&head, node5);
+	ft_lstadd_back(&head, node5);
 	lastnode = ft_lstlast(head);
 	printf("Last node content of current list: %s\n\n", (char *)lastnode->content);
 

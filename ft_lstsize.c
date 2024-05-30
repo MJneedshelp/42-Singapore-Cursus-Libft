@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 19:08:17 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/29 22:40:27 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/30 11:54:49 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int		count = 0;
+	int		count;
 	t_list	*nextptr;
 
 	if (lst == NULL)

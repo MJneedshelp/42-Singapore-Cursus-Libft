@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 03:35:36 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/30 03:35:36 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/30 11:53:23 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,22 @@
 
 #include "libft.h"
 
-void	ft_listadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*oldlast;
 	t_list	*oldlastnext;
 
-	if (lst && new)
+	if (*lst == NULL && new)
+	{
+		*lst = new;
+		new->next = NULL;
+	}
+	else if (lst && new)
 	{
 		oldlast = ft_lstlast(*lst);
 		oldlastnext = oldlast->next;
 		oldlast->next = new;
-		new->next = oldlastnext;
+		if (ft_lstsize(new) == 1)
+			new->next = oldlastnext;
 	}
 }
