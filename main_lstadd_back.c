@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 09:13:24 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/30 20:27:07 by mintan           ###   ########.fr       */
+/*   Updated: 2024/05/30 21:17:09 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 void	mydel(void *content)
 {
 	free(content);
+}
+
+void	myfunc(void *content)
+{
+	printf("Content: %s\n", (char *)content);
 }
 
 
@@ -47,7 +52,12 @@ int	main(void)
 		printf("Current node: %s\n",(char *)nxtptr->content);
 		nxtptr = nxtptr->next;
 	}
-	printf("Use ft_lstclear on n3\n");
+	
+	printf("\nUse ft_lstiter at n2\n");
+	ft_lstiter(n2, &myfunc);
+	
+	
+	printf("\nUse ft_lstclear on n3\n");
 	ft_lstclear(&n3, delptr);
 	nxtptr = head;
 	while (nxtptr)
