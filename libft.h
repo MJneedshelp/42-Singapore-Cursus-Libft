@@ -6,18 +6,17 @@
 /*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:37:26 by mintan            #+#    #+#             */
-/*   Updated: 2024/05/30 21:30:38 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/01 15:45:29 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
 # include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

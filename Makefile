@@ -6,7 +6,7 @@
 #    By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/15 22:10:59 by mintan            #+#    #+#              #
-#    Updated: 2024/06/01 13:09:01 by mintan           ###   ########.fr        #
+#    Updated: 2024/06/01 14:51:00 by mintan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,12 @@ bonus: $(BONUSOBJS)
 # r > add specified files into ar | c > create archive| s > write index to ar
 # "@" > Target | "^" > Prerequisites
 $(NAME): $(OBJECTS)
-	echo "making the library now"
 	ar rcs $@ $^
 
 # Rule to create the OBJECTS
 # "<" > Prerequisites
 
 %.o: %.c
-	echo "making object files now"
 	$(CC) $(CFLAGS) $< -o $@
 
 # Clear the build files	
