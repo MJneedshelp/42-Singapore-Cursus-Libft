@@ -31,8 +31,10 @@ int	main(void)
 	t_list	*n3;
 	t_list	*n4;
 	t_list	*nxtptr;
+	t_list	*newlist;
 	int		lstsize;
 	void	(*delptr)(void *) = &mydel;
+
 
 	head = NULL;
 	printf("Creating nodes now\n");
@@ -52,11 +54,15 @@ int	main(void)
 		printf("Current node: %s\n",(char *)nxtptr->content);
 		nxtptr = nxtptr->next;
 	}
-	
+
 	printf("\nUse ft_lstiter at n2\n");
 	ft_lstiter(n2, &myfunc);
-	
-	
+
+	newlist = ft_lstmap(head, ,mydel);
+
+
+/* Test for ft_lstclear
+
 	printf("\nUse ft_lstclear on n3\n");
 	ft_lstclear(&n3, delptr);
 	nxtptr = head;
@@ -66,6 +72,7 @@ int	main(void)
 		nxtptr = nxtptr->next;
 	}
 
+*/
 //	printf("Use ft_lstdelone on node 3\n");
 //	ft_lstdelone(n3, delptr);
 //	printf("Check contents of node 3: %s\n", (char *)n3->content);
