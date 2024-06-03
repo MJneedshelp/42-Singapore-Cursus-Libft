@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Compiler + compile flags 
+# Compiler + compile flags
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -c
 
@@ -41,7 +41,7 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
-# Clear the build files	
+# Clear the build files
 clean:
 	rm -f $(OBJECTS) $(BONUSOBJS)
 
@@ -52,4 +52,4 @@ fclean: clean
 re:	fclean all
 
 # Phony targets
-.PHONY: all clean re
+.PHONY: all clean re bonus fclean
